@@ -1,8 +1,15 @@
 import React from 'react'
+// import { Provider}
+import { Topics } from '../topics/topics.component'
+
+import * as SA from './app.style'
 
 const App = () => {
   return (
-    <div>Hello Monaco</div>
+    <SA.StyledAppWarrper>
+      {/* <div>Hello Monaco</div> */}
+      <Topics />
+    </SA.StyledAppWarrper>
   )
 }
 
