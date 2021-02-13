@@ -3,6 +3,7 @@ import { get } from 'axios'
 
 import { Scrollbar } from "react-scrollbars-custom"
 import * as ST from './topics.style'
+import * as SR from '../reusable/reusable.style'
 
 const Topics = () => {
   const [topics, setTopics] = useState([])
@@ -12,8 +13,8 @@ const Topics = () => {
       try {
         const getResult = async() => {
           const result = await get ('https://raw.githubusercontent.com/monaco-digital/ms-backend-mock/master/data/topics.json')
-          console.log(result)
           setTopics(result.data)
+          console.log(result, 'topics')
         }
         getResult()
         } catch (error) {
@@ -24,14 +25,17 @@ const Topics = () => {
   )
 
   return (
-    <ST.StyledPaper elevation={3}>
-      <ST.StyledTitle>Select a Topic of Interest</ST.StyledTitle>
+    <SR.StyledPaper path="/" elevation={3}>
+      <SR.StyledTitle>Select a Topic of Interest</SR.StyledTitle>
       <Scrollbar>
-        {topics.map(({ questionText }) => (
-          <ST.StyledTopics>{questionText}</ST.StyledTopics>
+        {topics.map(({ questionText }, key) => (
+          <ST.StyledTopics
+            to="related"
+            key={key}
+          >{questionText}</ST.StyledTopics>
         ))}
       </Scrollbar>
-    </ST.StyledPaper>
+    </SR.StyledPaper>
   )
 }
 
