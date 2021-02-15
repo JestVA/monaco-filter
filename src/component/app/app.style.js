@@ -3,18 +3,11 @@ import styled from 'styled-components'
 
 
 export const StyledRouter = styled(Router)`
+  height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
   margin: 1rem;
 
-  @media only screen and (min-width: 768px) {
-    grid-column: 2/11;
-    grid-row: 2/11;
-  }
-  @media only screen and (min-width: 992px) {
-    grid-column: 3/11;
-    grid-row: 2/-2;
-  }
 `
 
 export const StyledAppWarrper = styled.div`

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import { topicsReducer } from './topics.reducer'
+import { monacoReducer } from './monaco.reducer'
 
 const createReducer = asyncReducers => combineReducers({
-  topics: topicsReducer,
+  monaco: monacoReducer,
   ...asyncReducers
 })
 
