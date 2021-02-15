@@ -2,6 +2,7 @@ import { Router } from '@reach/router'
 import styled from 'styled-components'
 
 
+/* export const StyledRouter = styled.div` */
 export const StyledRouter = styled(Router)`
   height: 100%;
   grid-column: 1/-1;

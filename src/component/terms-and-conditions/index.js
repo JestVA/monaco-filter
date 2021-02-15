@@ -1,3 +1,3 @@
 export {
-  Related
-} from './related.component'
+  Terms
+} from './terms-and-conditions.component'

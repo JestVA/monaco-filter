@@ -4,12 +4,12 @@ import { get } from 'axios'
 import * as SRL from './terms-and-conditions.style'
 import * as SR from '../reusable/reusable.style'
 import Scrollbar from 'react-scrollbars-custom'
-import { navigate } from '@reach/router'
+// import { navigate } from '@reach/router'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMonacoDataAction } from '../../store/monaco.actions'
 
 
-const Related = () => {
+const Terms = () => {
   const paragraphs = useSelector(({ monaco }) => monaco.paragraphs)
   const dispatch = useDispatch()
 
@@ -40,4 +40,4 @@ The benefits include increasing your control over your business/platform, while 
   )
 }
 
-export { Related }
+export { Terms }
